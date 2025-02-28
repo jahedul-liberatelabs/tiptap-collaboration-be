@@ -1,0 +1,29 @@
+{
+  "name": "simple-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@hocuspocus/server": "^2.15.2",
+    "@types/express": "^5.0.0",
+    "@types/express-ws": "^3.0.5",
+    "express": "^4.21.2",
+    "express-ws": "^5.0.2",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3",
+    "ws": "^8.18.1",
+    "y-websocket": "^2.1.0",
+    "yjs": "^13.6.23"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.5.14"
+  }
+}

@@ -29,5 +29,13 @@ app.ws("/collaboration", (websocket, request) => {
   server.handleConnection(websocket, request, context);
 });
 
-// Start the server
-app.listen(1234, () => console.log("Listening on http://127.0.0.1:1234"));
+// Only start the server if we're running directly (not being imported by Vercel)
+if (process.env.NODE_ENV !== "production") {
+  const port = process.env.PORT || 1234;
+  app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+  });
+}
+
+// This is important for Vercel
+export default app;

@@ -8,8 +8,15 @@
     ],
     "routes": [
       {
+        "src": "/ws/(.*)",
+        "dest": "/server.ts"
+      },
+      {
         "src": "/(.*)",
         "dest": "/server.ts"
       }
-    ]
+    ],
+    "env": {
+      "NODE_ENV": "production"
+    }
   }

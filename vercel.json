@@ -8,8 +8,11 @@
     ],
     "routes": [
       {
-        "src": "/ws/(.*)",
-        "dest": "/server.ts"
+        "src": "/collaboration",
+        "dest": "/server.ts",
+        "headers": {
+          "Upgrade": "websocket"
+        }
       },
       {
         "src": "/(.*)",
